@@ -1,0 +1,25 @@
+﻿# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local logs and temporary files
+*.log
+*.tmp
+
+# Very large training checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

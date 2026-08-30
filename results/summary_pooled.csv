@@ -1,0 +1,3 @@
+controller,split,episodes,wins,losses,ties,effective_win_rate,effective_win_rate_ci95_low,effective_win_rate_ci95_high,WEZ_occupancy_mean,G_exposure_integral_mean,shield_intervention_rate_mean,done_cause_counts_json
+ppo,train,770,496,208,66,0.687012987012987,0.6542595906439997,0.7197663833819742,0.03072586788601062,284.2356861081331,0.0,"{""blue_kill"": 496, ""collision"": 66, ""red_kill"": 208}"
+ppo,eval,50,19,24,7,0.45,0.3121017766611912,0.5878982233388088,0.005507944275804017,457.459427831957,0.0,"{""blue_kill"": 19, ""collision"": 7, ""red_kill"": 24}"

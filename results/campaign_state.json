@@ -1,0 +1,15 @@
+{
+  "status": "PASS_RECALC_CAMPAIGN_SCRIPT_COMPLETED",
+  "controllers": [
+    "ppo"
+  ],
+  "seeds": [
+    2
+  ],
+  "train_steps": 50000,
+  "eval_episodes": 50,
+  "max_steps": 300,
+  "theta_deg": 5.0,
+  "agent_role": "blue",
+  "note": "R3A1 repaired campaign; previous manuscript figures are not canonical."
+}
