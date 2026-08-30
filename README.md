@@ -1,4 +1,4 @@
-﻿# Shielded PPO 6-DoF WEZ Air-Combat Audit
+# Shielded PPO 6-DoF WEZ Air-Combat Audit
 
 This repository contains the reproducibility package for the manuscript:
 
@@ -12,10 +12,10 @@ The study does not claim a new PPO algorithm, a new canonical air-combat maneuve
 
 ## Repository structure
 
-- src/: 6-DoF air-combat simulator and PPO / shielded-PPO source code.
-- esults/: final postflight audit tables, manifests, and summary files.
-- supplementary/true3d_replays/: true-coordinate 3D replay CSV files, representative figures, and supplementary replay videos/GIFs.
-- scripts/: helper scripts for reproducibility and postflight analysis.
+- `src/`: 6-DoF air-combat simulator and PPO / shielded-PPO source code.
+- `results/`: final postflight audit tables, manifests, and summary files.
+- `supplementary/true3d_replays/`: true-coordinate 3D replay CSV files, representative figures, and supplementary replay videos/GIFs.
+- `scripts/`: helper scripts for reproducibility and postflight analysis.
 
 ## Main reported result
 
