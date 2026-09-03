@@ -1,0 +1,4 @@
+role,wez_threshold_deg,training_seed,matched_episode,publication_status
+combined_audit_representative,3,2,7,FINAL_P0_7F2
+threshold_3deg_representative,3,2,40,FINAL_P0_7F2
+threshold_5deg_representative,5,1,33,FINAL_P0_7F2
