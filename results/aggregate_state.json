@@ -1,9 +1,0 @@
-{
-  "status": "PASS_AGGREGATED_FULL_SPLIT_UNITS",
-  "episode_rows": 9281,
-  "summary_by_theta_controller_seed_split_rows": 49,
-  "summary_by_theta_controller_split_rows": 15,
-  "summary_by_controller_split_across_theta_rows": 7,
-  "manifest_expected_units_seen": 27,
-  "manifest_completed_units": 27
-}
