@@ -49,6 +49,18 @@ The final manuscript uses only the following matched true-coordinate representat
 
 Replay figures and supplementary videos are descriptive trajectory-level evidence only. They are not additional inferential samples.
 
+## Final supplementary 3D-video freeze
+
+The following MP4 assets are synchronized on the `main` branch under `supplementary/true3d_videos/final/` and are generated only from the frozen P0-7F2 selected true-coordinate replay records:
+
+| File | Role | Bytes | SHA-256 |
+|---|---|---:|---|
+| `matched_true_coordinate_replay_aggregate_theta3_seed2_ep7.mp4` | combined-audit representative | 838855 | `134702B4F5C3799F627F07E75E39D8E75BD80FA8F83B181DE70B8BE32E2C59B2` |
+| `matched_true_coordinate_replay_theta3_seed2_ep40.mp4` | 3 deg threshold representative | 641852 | `08BC3F000D5784A55C80A244CBAB021EFC2F87EF763F22150728C88C153474DF` |
+| `matched_true_coordinate_replay_theta5_seed1_ep33.mp4` | 5 deg threshold representative | 233987 | `6BC15E9BB10118AA70781B519D8A998D3D9CC1200E06C7FAA402273DB22F65A3` |
+
+The synchronized video set performs no new training and no new physics evaluation. Video generation is a postflight visualisation of frozen trajectory records. The authoritative video manifest is `supplementary/true3d_videos/PUBLICATION_3D_VIDEO_MANIFEST.csv`.
+
 ## Repository precedence
 
 Publication-facing quantitative authority is:
@@ -67,5 +79,7 @@ Older exploratory or pre-P0-7F2 outputs are retained only for provenance and mus
 - seed-aware inference: frozen;
 - representative replay selections: frozen;
 - publication replay PDF assets: final selection fixed;
-- supplementary 3D videos: generated only from frozen selected true-coordinate replay records, without new training or new physics evaluation;
-- manuscript Code/Data Availability statement: to reference this repository state.
+- supplementary 3D videos: **SYNCHRONIZED AND HASH-RECORDED ON `main`**;
+- new training for video generation: **FALSE**;
+- new physics evaluation for video generation: **FALSE**;
+- manuscript Code/Data Availability statement: may now reference this frozen repository state.
