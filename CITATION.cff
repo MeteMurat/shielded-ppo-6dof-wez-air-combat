@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated manuscript."
+title: "Supervisory Shielding for Proximal Policy Optimization in Six-Degree-of-Freedom Autonomous Air Combat: A Reproducible Matched Weapon-Engagement-Zone Audit"
+type: software
+authors:
+  - family-names: "Türkoğlu"
+    given-names: "Murat Metehan"
+    orcid: "https://orcid.org/0000-0002-2857-866X"
+  - family-names: "Özkol"
+    given-names: "İbrahim"
+    orcid: "https://orcid.org/0000-0002-9300-9092"
+repository-code: "https://github.com/MeteMurat/shielded-ppo-6dof-wez-air-combat"
+date-released: 2026-09-03
