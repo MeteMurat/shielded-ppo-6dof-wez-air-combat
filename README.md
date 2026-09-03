@@ -31,7 +31,7 @@ The manuscript-level quantitative authority is the two-stage frozen chain:
    - training-seed identity and matched episode identity preserved as common blocks across the two WEZ strata;
    - strong directional claims require the seed-block bootstrap CI and three-seed mean t-CI to exclude zero in the same direction, with all three training-seed means sharing that direction.
 
-Older R3A/P0-7C/P0-7E result files retained in repository history or legacy folders are **not** the final quantitative manuscript authority.
+Older R3A/P0-7C/P0-7E numerical summaries are not part of the visible publication result tree on this branch. They remain recoverable through Git history for provenance only.
 
 ## Final aggregate point estimates
 
@@ -49,10 +49,10 @@ Accordingly, the repository and manuscript support neither universal controller 
 
 ## Publication-facing repository structure
 
-- `src/` — 6-DoF simulator and PPO / shielded-PPO source tree.
-- `results/` — historical campaign material plus the final P0-7F2/P0-7F3 publication authority files.
-- `scripts/publication/` — scripts and PowerShell runners associated with the final matched-evaluation and seed-block postflight gates.
-- `supplementary/true3d_replays/final/` — final representative matched true-coordinate replay PDFs used by the manuscript.
+- `src/` — retained 6-DoF simulator and PPO / shielded-PPO development source tree. See `src/PUBLICATION_SCOPE.md` before interpreting historical subdirectories.
+- `results/` — P0-7F2/P0-7F3 publication authority summaries, adjudications, inference output, replay-selection metadata, and provenance manifest.
+- `scripts/publication/` — publication-state notes and a read-only consistency checker. These files do not retrain a controller or rerun the physics model.
+- `supplementary/true3d_replays/final/` — GitHub-renderable previews of the three authoritative matched replay figures. Original frozen vector-PDF hashes are recorded in `results/PUBLICATION_MANIFEST_SHA256.csv`; one exact compressed vector-PDF artefact is also retained as an `.xz` file.
 - `requirements-repro.txt` — compact publication-facing dependency list.
 - `CITATION.cff` — citation metadata for the repository/manuscript.
 
@@ -65,6 +65,8 @@ The final manuscript uses only the following P0-7F2 matched true-coordinate repl
 - combined-audit representative: theta=3 deg, training seed 2, matched episode 7;
 - 3 deg representative: training seed 2, matched episode 40;
 - 5 deg representative: training seed 1, matched episode 33.
+
+The repository exposes lightweight previews for all three selections so that the publication evidence can be inspected directly in GitHub. The authoritative manuscript figures are the frozen vector PDFs hash-bound in the publication manifest.
 
 These replays are descriptive trajectory-level evidence. They are not additional inferential samples, do not demonstrate controller superiority or a formal safety guarantee, and do not establish discovery of a new canonical manoeuvre.
 
@@ -79,6 +81,16 @@ The publication-facing environment is Python 3.11. Principal package versions re
 - Matplotlib 3.10.3
 
 The broader development environment is retained under `src/requirements.txt`; `requirements-repro.txt` provides the compact publication-facing set.
+
+## Read-only verification
+
+From the repository root:
+
+```bash
+python scripts/publication/verify_publication_results.py
+```
+
+The check verifies the publication-facing aggregate P0-7F2 values and the P0-7F3 inferential guardrails. It performs no training and no scientific simulation.
 
 ## Reproducibility guardrails
 
