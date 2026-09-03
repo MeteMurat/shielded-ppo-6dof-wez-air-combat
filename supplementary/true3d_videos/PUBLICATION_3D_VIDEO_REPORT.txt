@@ -1,0 +1,10 @@
+P0-7F2 PUBLICATION 3D VIDEO GENERATION
+======================================
+generated_utc=2026-09-03T11:32:10.277992+00:00
+p0_7f2_root=D:\dogfightproject\_review_revision\P0_7F2_MATCHED_EVAL_TRUE_COORDINATE_V1
+output_dir=D:\dogfightproject\_review_revision\P0_7F2_MATCHED_EVAL_TRUE_COORDINATE_V1\publication_videos
+new_training_performed=False
+new_physics_evaluation_performed=False
+source_authority=frozen P0-7F2 selected true-coordinate replay CSVs
+interpretation=descriptive trajectory-level visualisation only
+manifest_sha256=E7C2AE10BD6827449E46016F46A74EECACD8380FE50D2984C508F7AD9223AC84
