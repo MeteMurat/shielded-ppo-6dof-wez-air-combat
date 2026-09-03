@@ -1,0 +1,4 @@
+scope,theta,seed,episode,centrality_distance,selection_rule,target_d_effective_win,target_d_own_wez,target_d_opp_wez,target_d_max_G,selected_d_effective_win,selected_d_own_wez,selected_d_opp_wez,selected_d_max_G
+aggregate_theta_3_5,3,2,7,0.2407536412085485,minimum_IQR_scaled_distance_to_scope_mean_paired_difference_vector,0.09333333333333334,0.00975626862793917,-0.0011089995546636198,0.20373003535379464,0.0,0.011960152708184204,0.0,0.062347748405819914
+theta_3,3,2,40,0.24577511203922559,minimum_IQR_scaled_distance_to_scope_mean_paired_difference_vector,0.06666666666666667,0.00207434575518814,-0.0005797749902866471,0.12636393676112315,0.0,0.00018501387604070302,0.0,0.05508727219237031
+theta_5,5,1,33,0.34355608213410266,minimum_IQR_scaled_distance_to_scope_mean_paired_difference_vector,0.12,0.017438191500690207,-0.0016382241190405925,0.2810961339464661,0.0,0.02121212121212121,0.0,0.2969568443095305
