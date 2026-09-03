@@ -1,0 +1,33 @@
+P0-7F2 MATCHED-EVALUATION + TRUE-COORDINATE FREEZE
+====================================================================================================
+
+STATUS=PASS_MATCHED_EVALUATION_TRUE_COORDINATE_FREEZE
+NEW_TRAINING_PERFORMED=False
+P0_7D_CHECKPOINT_AUTHORITY=RETAINED
+P0_7C_P0_7E_FINAL_QUANTITATIVE_INFERENCE=SUPERSEDED_BY_P0_7F2_MATCHED_EVALUATION
+
+WHY THIS GATE WAS REQUIRED
+  Original corrected evaluation reused each controller's training Env RNG state.
+  Different training episode counts can shift evaluation initial-condition streams despite the same nominal seed.
+  P0-7F2 therefore evaluates the frozen corrected checkpoints on explicit common geometries.
+
+AGGREGATE CONTROLLER MEANS
+  ppo: effective_win=0.688333333 own_wez=0.00936750668 opp_wez=0.00477928467 max_G=9.16651909 G_integral=582.499772 shield_rate=0
+  ppo_shield: effective_win=0.781666667 own_wez=0.0191237753 opp_wez=0.00367028512 max_G=9.37024912 G_integral=597.959621 shield_rate=0.00224571296
+
+AGGREGATE HIERARCHICAL DIFFERENCES (SHIELD-PPO)
+  effective_win: delta=0.0933333333 CI95=[-0.203333333,0.376666667] status=UNRESOLVED
+  own_wez: delta=0.00975626863 CI95=[-0.000815952205,0.0197028102] status=UNRESOLVED
+  opp_wez: delta=-0.00110899955 CI95=[-0.0037048242,0.00182126107] status=UNRESOLVED
+  max_G: delta=0.203730035 CI95=[-0.376439969,0.770793989] status=UNRESOLVED
+  G_integral: delta=15.4598494 CI95=[-207.57169,231.374912] status=UNRESOLVED
+  shield_rate: delta=0.00224571296 CI95=[0,0.00645692726] status=UNRESOLVED
+
+REPRESENTATIVE MATCHED TRUE-COORDINATE REPLAYS
+  aggregate_theta_3_5: theta=3 seed=2 episode=7 centrality_distance=0.240754
+  theta_3: theta=3 seed=2 episode=40 centrality_distance=0.245775
+  theta_5: theta=5 seed=1 episode=33 centrality_distance=0.343556
+
+PLOT_STATUS=GENERATED_PDF_VECTOR_AND_PNG
+
+NEXT_STEP=ADJUDICATE_P0_7F2_THEN_MANUSCRIPT_PROPAGATION
