@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript."
+title: "Shielded PPO 6-DoF WEZ Air-Combat Audit"
+type: software
+authors:
+  - family-names: "Türkoğlu"
+    given-names: "Murat Metehan"
+  - family-names: "Özkol"
+    given-names: "İbrahim"
+repository-code: "https://github.com/MeteMurat/shielded-ppo-6dof-wez-air-combat"
+date-released: 2026-09-03
+abstract: >-
+  Reproducibility package for a matched, training-seed-aware evaluation of
+  standard PPO and shielded PPO in a six-degree-of-freedom autonomous
+  air-combat simulation with directional weapon-engagement-zone metrics.
+keywords:
+  - reinforcement learning
+  - proximal policy optimization
+  - autonomous air combat
+  - six-degree-of-freedom simulation
+  - weapon engagement zone
+  - supervisory shielding
