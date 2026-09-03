@@ -22,7 +22,11 @@ The manuscript is governed by the final P0-7F2/P0-7F3 evaluation and inference s
 - Independent controller-level replication unit: the independently trained policy realisation (training seed), not the repeated evaluation episode.
 - Final aggregate uncertainty: P0-7F3 seed-block bootstrap preserving seed and matched-episode identity across the two WEZ strata, supplemented by a three-seed Student-t interval.
 
-The publication-authoritative record is `results/PUBLICATION_AUTHORITY_P0_7F2_P0_7F3.md`, with machine-readable publication files in `results/final_publication/`.
+The publication-authoritative records are:
+
+- `PUBLICATION_STATE.md` — repository publication-state summary;
+- `results/PUBLICATION_AUTHORITY_P0_7F2_P0_7F3.md` — scientific claim authority and guardrails;
+- `results/final_publication/` — machine-readable final P0-7F2/P0-7F3 records.
 
 ## Final quantitative interpretation
 
@@ -67,18 +71,31 @@ The final manuscript uses the following representative matched true-coordinate r
 | 3 deg threshold representative | 3 deg | 2 | 40 |
 | 5 deg threshold representative | 5 deg | 1 | 33 |
 
-Representative replays are descriptive trajectory-level evidence only. They are not additional inferential samples and are not evidence of a new canonical manoeuvre.
+Representative replay figures and supplementary replay videos are descriptive trajectory-level evidence only. They are not additional inferential samples and are not evidence of a new canonical manoeuvre.
 
-The exact publication figure filenames, byte sizes, and SHA-256 digests are recorded under `supplementary/true3d_replays/`. The manuscript submission package contains those exact vector-PDF figure assets. Superseded seed-0 replay artefacts are isolated under `supplementary/legacy_seed0/` and are not final publication evidence.
+The exact publication figure filenames, byte sizes, and SHA-256 digests are recorded under `supplementary/true3d_replays/`. Supplementary video provenance and interpretation rules are defined under `supplementary/true3d_videos/`. Superseded seed-0 replay artefacts are isolated from the publication-facing replay state and are not final publication evidence.
+
+## Supplementary 3D replay videos
+
+The final supplementary video set is generated only from the frozen P0-7F2 selected true-coordinate replay records corresponding to matched episodes 7, 40, and 33 listed above. Video generation is a visualisation-only postflight operation: it performs no new training, no new physics evaluation, and no modification of the frozen P0-7F2/P0-7F3 quantitative state.
+
+The target publication-facing MP4 names are:
+
+- `matched_true_coordinate_replay_aggregate_theta3_seed2_ep7.mp4`;
+- `matched_true_coordinate_replay_theta3_seed2_ep40.mp4`;
+- `matched_true_coordinate_replay_theta5_seed1_ep33.mp4`.
+
+See `supplementary/true3d_videos/README.md` for the video guardrail and generation rule.
 
 ## Repository structure
 
 - `src/`: 6-DoF air-combat simulator and PPO / shielded-PPO source material.
+- `PUBLICATION_STATE.md`: top-level final publication-state record.
 - `results/PUBLICATION_AUTHORITY_P0_7F2_P0_7F3.md`: human-readable publication authority and claim guardrails.
 - `results/final_publication/`: publication-facing P0-7F2/P0-7F3 summaries, adjudications, seed-aware inference, checkpoint hashes, replay-selection records, and frozen-data SHA-256 manifest.
 - `results/legacy_pre_P0_7F2/`: historical pre-final campaign outputs retained only for provenance.
-- `supplementary/true3d_replays/`: publication replay selections and exact figure hash manifest.
-- `supplementary/legacy_seed0/`: superseded seed-0 replay material retained only for provenance.
+- `supplementary/true3d_replays/`: publication replay selections and exact replay-figure hash manifest.
+- `supplementary/true3d_videos/`: publication-facing supplementary 3D replay-video specification and final MP4 assets.
 - `requirements-repro.txt`: compact dependency set for the publication reproducibility environment.
 
 Large frozen raw matched-evaluation artefacts are identified by filename and SHA-256 in `results/final_publication/FINAL_DATA_SHA256_MANIFEST.csv`. Publication-facing summaries and final adjudication/inference records are stored directly in the repository.
