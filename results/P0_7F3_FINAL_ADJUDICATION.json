@@ -1,0 +1,39 @@
+{
+  "gate": "P0-7F3",
+  "status": "PASS_SEED_BLOCK_INFERENCE_POSTFLIGHT",
+  "input_authority": "P0-7F2 matched evaluation and true-coordinate freeze",
+  "new_training_performed": false,
+  "new_physics_evaluation_performed": false,
+  "correction": {
+    "reason": "P0-7F2 reused seed identities and matched evaluation episode IDs across theta=3 and theta=5. Aggregate resampling should preserve those blocks instead of resampling theta strata independently.",
+    "point_estimates_changed": false,
+    "checkpoint_authority_changed": false,
+    "replay_authority_changed": false
+  },
+  "primary_guardrail": "For strong directional manuscript claims, require seed-block bootstrap CI and three-seed mean t-CI to exclude zero in the same direction, with all three seed means sharing that direction.",
+  "aggregate_results": {
+    "effective_win": {"delta": 0.09333333333333334, "seed_block_boot_ci95": [-0.23666666666666666, 0.36999999999999994], "seed_mean_t_ci95": [-0.6832660181677576, 0.8699326848344243], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "own_wez": {"delta": 0.009756268627939173, "seed_block_boot_ci95": [0.004499517328407871, 0.016432583226725635], "seed_mean_t_ci95": [-0.005901022452357683, 0.025413559708236028], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "opp_wez": {"delta": -0.0011089995546636198, "seed_block_boot_ci95": [-0.00403463764073899, 0.0018693542445285013], "seed_mean_t_ci95": [-0.008470193343263998, 0.006252194233936759], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "max_G": {"delta": 0.20373003535379466, "seed_block_boot_ci95": [-0.5535887425968847, 0.9447785851258755], "seed_mean_t_ci95": [-1.6866794833987584, 2.0941395541063477], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "G_integral": {"delta": 15.459849392244315, "seed_block_boot_ci95": [-201.93592651706038, 232.76224967275488], "seed_mean_t_ci95": [-541.1015594133846, 572.0212581978733], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "shield_rate": {"delta": 0.0022457129553859387, "seed_block_boot_ci95": [0.0, 0.006387568851792379], "seed_mean_t_ci95": [-0.007416810022702485, 0.011908235933474363], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"}
+  },
+  "theta5_results": {
+    "effective_win": {"delta": 0.12, "seed_block_boot_ci95": [-0.19333333333333336, 0.5266666666666666], "seed_mean_t_ci95": [-0.8239723305006261, 1.0639723305006261], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "own_wez": {"delta": 0.017438191500690203, "seed_block_boot_ci95": [-0.002642487899167255, 0.03121845095263489], "seed_mean_t_ci95": [-0.026761493044715243, 0.06163787604609565], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "opp_wez": {"delta": -0.0016382241190405931, "seed_block_boot_ci95": [-0.006733829370316088, 0.004193817599346632], "seed_mean_t_ci95": [-0.015229477955838712, 0.011953029717757524], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "max_G": {"delta": 0.28109613394646615, "seed_block_boot_ci95": [-0.046528793684292934, 0.6286363208828676], "seed_mean_t_ci95": [-0.5466628532490092, 1.1088551211419415], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"},
+    "G_integral": {"delta": -65.94497033234245, "seed_block_boot_ci95": [-118.30261674823915, -14.262238701565284], "seed_mean_t_ci95": [-94.052545716769, -37.83739494791589], "status": "ROBUST_NEGATIVE"},
+    "shield_rate": {"delta": 0.0044914259107718775, "seed_block_boot_ci95": [0.0, 0.01282289549116536], "seed_mean_t_ci95": [-0.01483362004540497, 0.023816471866948727], "status": "UNRESOLVED_ACROSS_TRAINING_SEEDS"}
+  },
+  "manuscript_guardrails": [
+    "All aggregate PPO-versus-shielded-PPO differences remain descriptive unless the conservative seed-level criterion is met.",
+    "Do not claim a statistically resolved aggregate effective-win difference.",
+    "Do not claim a statistically resolved aggregate own-WEZ or opponent-WEZ difference.",
+    "Do not claim an aggregate max-G or G-integral safety improvement.",
+    "Theta=5 G-integral reduction may be reported as threshold-specific directional evidence only if its final conservative status is ROBUST_NEGATIVE.",
+    "Emphasize only three independent training seeds; evaluation episodes increase within-policy precision but not the number of trained-policy replicates."
+  ],
+  "next_step": "If PASS, close quantitative inference and proceed to manuscript Title then Abstract."
+}
