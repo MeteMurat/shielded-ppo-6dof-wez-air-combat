@@ -79,13 +79,13 @@ The exact publication figure filenames, byte sizes, and SHA-256 digests are reco
 
 The final supplementary video set is generated only from the frozen P0-7F2 selected true-coordinate replay records corresponding to matched episodes 7, 40, and 33 listed above. Video generation is a visualisation-only postflight operation: it performs no new training, no new physics evaluation, and no modification of the frozen P0-7F2/P0-7F3 quantitative state.
 
-The target publication-facing MP4 names are:
+The following MP4 assets are synchronized on the `main` branch under `supplementary/true3d_videos/final/`:
 
 - `matched_true_coordinate_replay_aggregate_theta3_seed2_ep7.mp4`;
 - `matched_true_coordinate_replay_theta3_seed2_ep40.mp4`;
 - `matched_true_coordinate_replay_theta5_seed1_ep33.mp4`.
 
-See `supplementary/true3d_videos/README.md` for the video guardrail and generation rule.
+Exact byte sizes and SHA-256 digests are frozen in `supplementary/true3d_videos/PUBLICATION_3D_VIDEO_MANIFEST.csv`. See `supplementary/true3d_videos/README.md` for interpretation guardrails and generation provenance.
 
 ## Repository structure
 
@@ -95,7 +95,7 @@ See `supplementary/true3d_videos/README.md` for the video guardrail and generati
 - `results/final_publication/`: publication-facing P0-7F2/P0-7F3 summaries, adjudications, seed-aware inference, checkpoint hashes, replay-selection records, and frozen-data SHA-256 manifest.
 - `results/legacy_pre_P0_7F2/`: historical pre-final campaign outputs retained only for provenance.
 - `supplementary/true3d_replays/`: publication replay selections and exact replay-figure hash manifest.
-- `supplementary/true3d_videos/`: publication-facing supplementary 3D replay-video specification and final MP4 assets.
+- `supplementary/true3d_videos/`: publication-facing supplementary 3D replay-video provenance, hash manifest, and final MP4 assets.
 - `requirements-repro.txt`: compact dependency set for the publication reproducibility environment.
 
 Large frozen raw matched-evaluation artefacts are identified by filename and SHA-256 in `results/final_publication/FINAL_DATA_SHA256_MANIFEST.csv`. Publication-facing summaries and final adjudication/inference records are stored directly in the repository.
